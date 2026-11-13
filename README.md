@@ -45,3 +45,36 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 | Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
 
 [data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+
+---
+
+## Hướng dẫn tái lập thực nghiệm (Reproduction Guide)
+
+### 1. Cài đặt môi trường và thư viện
+Yêu cầu Python 3.11+. Cài đặt các thư viện cần thiết:
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Chạy toàn bộ Pipeline và Benchmark
+Chạy lệnh sau tại thư mục gốc của repository:
+```bash
+python -m starter.src.run
+```
+
+Pipeline sẽ tự động:
+1. Đọc 35 trang PDF từ `data/international_debt_report_2026.pdf` (Trang 21–55).
+2. Chuẩn hóa text và sinh chunking cho Cấu hình A (Fixed 500/50) và Cấu hình B (Paragraph-aware).
+3. Tạo embedding bằng `sentence-transformers/all-MiniLM-L6-v2` và lập chỉ mục vào Qdrant local tại `./qdrant_db`.
+4. Đọc 20 câu hỏi benchmark từ `benchmark/questions.json` và chạy truy xuất Top-3 cho cả 3 cấu hình A, B, C.
+5. Tính toán Hit@1, Hit@3 cho tập Dev (15 câu) và tập Test (5 câu).
+6. Tự động lưu log vết truy xuất vào `results/retrieval_trace.json`, bảng tổng hợp tại `results/summary.json` và cập nhật `artifacts/experiment_log.csv`.
+
+### 3. Vị trí các tài liệu nộp bài
+- **Thông tin học viên:** [STUDENT.md](STUDENT.md)
+- **Manifest dữ liệu:** [data/manifest.json](data/manifest.json)
+- **Bộ Benchmark 20 câu:** [benchmark/questions.json](benchmark/questions.json)
+- **Báo cáo phân tích cá nhân:** [report/individual/2A202603543_NguyenHuyGiang.md](report/individual/2A202603543_NguyenHuyGiang.md)
+- **Log thực nghiệm:** [artifacts/experiment_log.csv](artifacts/experiment_log.csv)
+- **Trace kết quả:** [results/retrieval_trace.json](results/retrieval_trace.json)
+

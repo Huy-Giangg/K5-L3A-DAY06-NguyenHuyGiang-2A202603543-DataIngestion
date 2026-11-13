@@ -1,0 +1,36 @@
+{
+  "corpus_info": {
+    "source_id": "worldbank-idr-2026",
+    "title": "International Debt Report 2026",
+    "author": "The World Bank Group",
+    "source_path_or_url": "https://hdl.handle.net/10986/45762",
+    "doi": "10.1596/978-1-4648-2355-8",
+    "license_or_permission": "Creative Commons Attribution 3.0 IGO (CC BY 3.0 IGO)",
+    "accessed_at": "2026-11-13",
+    "format": "PDF (Adobe InDesign vector native text)",
+    "total_physical_pages_in_file": 280,
+    "selected_page_range": "Page 21 to Page 55 (35 physical pages)",
+    "page_counting_rule": "Chỉ tính các trang chứa văn bản phân tích có độ dài >= 500 ký tự; loại bỏ trang bìa, mục lục (trang 1-20), trang danh mục biểu đồ và trang chỉ có hình vẽ.",
+    "valid_content_pages_count": 35
+  },
+  "metadata_fields_designed": [
+    {
+      "name": "chapter",
+      "type": "string",
+      "description": "Chương hoặc phần lớn trong tài liệu (Key Takeaways, Chapter 1)",
+      "purpose": "Dùng làm metadata filter phân vùng ngữ cảnh"
+    },
+    {
+      "name": "section",
+      "type": "string",
+      "description": "Tiêu đề mục con trong chương",
+      "purpose": "Hỗ trợ định vị nội dung chi tiết"
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "description": "Số trang vật lý trong file PDF (1-based index)",
+      "purpose": "Dẫn nguồn bằng chứng (grounding/provenance)"
+    }
+  ]
+}

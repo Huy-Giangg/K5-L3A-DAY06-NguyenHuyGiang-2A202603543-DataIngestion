@@ -1,0 +1,71 @@
+{
+  "config_a": {
+    "dev": {
+      "total": 15,
+      "hit1_count": 8,
+      "hit1_rate": 0.5333,
+      "hit3_count": 10,
+      "hit3_rate": 0.6667
+    },
+    "test": {
+      "total": 5,
+      "hit1_count": 2,
+      "hit1_rate": 0.4,
+      "hit3_count": 4,
+      "hit3_rate": 0.8
+    },
+    "overall": {
+      "total": 20,
+      "hit1_count": 10,
+      "hit1_rate": 0.5,
+      "hit3_count": 14,
+      "hit3_rate": 0.7
+    }
+  },
+  "config_b": {
+    "dev": {
+      "total": 15,
+      "hit1_count": 10,
+      "hit1_rate": 0.6667,
+      "hit3_count": 11,
+      "hit3_rate": 0.7333
+    },
+    "test": {
+      "total": 5,
+      "hit1_count": 5,
+      "hit1_rate": 1.0,
+      "hit3_count": 5,
+      "hit3_rate": 1.0
+    },
+    "overall": {
+      "total": 20,
+      "hit1_count": 15,
+      "hit1_rate": 0.75,
+      "hit3_count": 16,
+      "hit3_rate": 0.8
+    }
+  },
+  "config_c": {
+    "dev": {
+      "total": 15,
+      "hit1_count": 11,
+      "hit1_rate": 0.7333,
+      "hit3_count": 12,
+      "hit3_rate": 0.8
+    },
+    "test": {
+      "total": 5,
+      "hit1_count": 5,
+      "hit1_rate": 1.0,
+      "hit3_count": 5,
+      "hit3_rate": 1.0
+    },
+    "overall": {
+      "total": 20,
+      "hit1_count": 16,
+      "hit1_rate": 0.8,
+      "hit3_count": 17,
+      "hit3_rate": 0.85
+    }
+  }
+}

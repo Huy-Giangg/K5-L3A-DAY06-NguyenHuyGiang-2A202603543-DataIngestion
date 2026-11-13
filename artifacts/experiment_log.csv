@@ -1,4 +1,4 @@
-strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+strategy,description,chunk_count,embed_time_sec,dev_hit1,dev_hit3,test_hit1,test_hit3
+Config A,Fixed-size 500/50,176,3.85,0.5333,0.6667,0.4,0.8
+Config B,Paragraph-aware max 800,121,2.88,0.6667,0.7333,1.0,1.0
+Config C,Paragraph-aware with filter,121,0.00,0.7333,0.8,1.0,1.0
