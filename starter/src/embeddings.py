@@ -30,3 +30,5 @@ class LocalEmbedder:
             convert_to_numpy=True
         )
         return embedding.tolist()
+
+        
